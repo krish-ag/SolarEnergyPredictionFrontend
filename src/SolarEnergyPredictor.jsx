@@ -15,7 +15,7 @@ export default function SolarEnergyPredictor() {
     const data = Object.fromEntries(formData)
 
     try {
-      const response = await axios.post('http://localhost:5000/Radiation', data)
+      const response = await axios.post('http://64.227.154.220/Radiation', data)
       setRadiation(response.data.Radiation)
     } catch (err) {
       setError('An error occurred while fetching the data. Please try again.')
